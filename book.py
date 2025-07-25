@@ -1,9 +1,8 @@
 class Book:
-    def __init__(self, title: str, author: str, genre: str, isbn: int, rating: float):
+    def __init__(self, title: str, author: str, genre: str, rating: float):
         self._title = title
         self._author = author
         self._genre = genre
-        self._isbn = isbn
         self._rating = rating
         self._read = False
 
@@ -26,12 +25,6 @@ class Book:
     def genre(self, value):
         self._genre = value
     @property
-    def get_isbn(self ):
-        return self._isbn
-    @get_isbn.setter
-    def get_isbn(self, value):
-        self._isbn = value
-    @property
     def is_read(self):
         return self._read
     @is_read.setter
@@ -43,4 +36,20 @@ class Book:
     @rating.setter
     def rating(self, value):
         self._rating = value
+    def to_dict(self):
+        return {'title': self.title,
+                'author': self.author,
+                'genre': self.genre,
+                'rating': self.rating,
+                'is_read': self.is_read
+        }
+
+    def from_dict(self, data):
+        self.title = data['title']
+        self.author = data['author']
+        self.genre = data['genre']
+        self.rating = data['rating']
+        self.is_read = data['is_read']
+
+
 
