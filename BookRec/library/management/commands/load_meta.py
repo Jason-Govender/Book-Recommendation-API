@@ -14,17 +14,14 @@ class Command(BaseCommand):
 
         with open(books, 'r', encoding='utf-8') as f:
             data = json.load(f)
-
-        for entry in data:
+        for book_id, entry in data.items():
             Book_Meta.objects.create(
-                book_id=entry['book_id'],
+                book_id=int(book_id),
                 title=entry['title'],
-                author=entry['author'],
+                author=entry['authors'],
                 average_rating=entry['average_rating'],
                 ratings_count=entry['ratings_count'],
-                url=entry['url'],
-                small_url=entry['small_url']
-
+                url=entry['image_url'],
+                small_url=entry['small_image_url']
             )
-
         self.stdout.write(self.style.SUCCESS(f"Loaded {len(data)} books into the database."))

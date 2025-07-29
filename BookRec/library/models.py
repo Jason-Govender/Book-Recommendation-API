@@ -20,7 +20,7 @@ class Book_Meta(models.Model):
     book_id = models.IntegerField(max_length=10)
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
-    average_rating = models.FloatField(max_length=3)
+    average_rating = models.FloatField(max_length=4)
     ratings_count = models.IntegerField(max_length=10)
     url = models.URLField(max_length=500)
     small_url = models.URLField(max_length=500)

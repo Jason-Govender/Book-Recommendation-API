@@ -39,8 +39,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'library',
-    'cors headers',
-    'ml_model',
 ]
 
 MIDDLEWARE = [
