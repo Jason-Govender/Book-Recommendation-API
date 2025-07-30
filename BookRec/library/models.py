@@ -9,22 +9,24 @@ with open(os.path.join(MODEL_DIR, "books.json")) as f:
     book_meta = json.load(f)
 
 class Book(models.Model):
-    book_id = models.IntegerField(max_length=200)
+    book_id = models.IntegerField()
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
-    genre = models.CharField(max_length=200)
-    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
     read = models.BooleanField(default=False)
 
 class Book_Meta(models.Model):
-    book_id = models.IntegerField(max_length=10)
+    book_id = models.IntegerField()
     title = models.CharField(max_length=200)
     author = models.CharField(max_length=200)
     average_rating = models.FloatField(max_length=4)
-    ratings_count = models.IntegerField(max_length=10)
+    ratings_count = models.IntegerField()
     url = models.URLField(max_length=500)
     small_url = models.URLField(max_length=500)
 
+class Rating_Data(models.Model):
+    user_id = models.IntegerField()
+    book_id = models.IntegerField()
+    rating = models.IntegerField(validators=[MinValueValidator(1), MaxValueValidator(5)])
 
 
 
