@@ -27,7 +27,9 @@ def recommend():
     cluster = find_cluster()
     books_in_cluster = top_books.get(cluster, [])
     choices = random.sample(books_in_cluster, min(len(books_in_cluster), 5))
-    books = Book_Meta.objects.filter(book_id=int(choices.book_id)).first()
+    books = Book_Meta.objects.filter(
+        book_id__in=[int(c.book_id) for c in choices]
+    )
     return books
 
 

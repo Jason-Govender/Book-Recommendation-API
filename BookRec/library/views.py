@@ -22,7 +22,7 @@ class RatingList(viewsets.modelViewSet):
 class RecommendView(APIView):
     def get(self, request):
         recommendation = recommend()
-        serializer = BookMetaSerializer(recommendation)
+        serializer = BookMetaSerializer(recommendation, many=True)
         return Response(serializer.data)
 
 
