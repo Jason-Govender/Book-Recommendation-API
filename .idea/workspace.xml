@@ -4,9 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="542b67cf-e4c9-4ba2-9afe-758371272229" name="Changes" comment="Made a React template.">
+    <list default="true" id="542b67cf-e4c9-4ba2-9afe-758371272229" name="Changes" comment="Wired API views.">
+      <change afterPath="$PROJECT_DIR$/BookRec/library/management/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BookRec/library/management/commands/__init__.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/BookRec/BookRec/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/BookRec/BookRec/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BookRec/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/BookRec/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +67,7 @@
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\jason\OneDrive\Documents\Python QT\BookRec\BookRec\library" />
+      <recent name="C:\Users\jason\OneDrive\Documents\Python QT\BookRec\BookRec" />
       <recent name="C:\Users\jason\OneDrive\Documents\Python QT\BookRec" />
     </key>
   </component>
@@ -85,7 +90,16 @@
       <workItem from="1753168522076" duration="8422000" />
       <workItem from="1753298404118" duration="914000" />
       <workItem from="1753460938699" duration="7076000" />
-      <workItem from="1753530932068" duration="8109000" />
+      <workItem from="1753530932068" duration="10667000" />
+      <workItem from="1753629377617" duration="62000" />
+      <workItem from="1753794289713" duration="9343000" />
+      <workItem from="1753805082116" duration="4032000" />
+      <workItem from="1753810938668" duration="76000" />
+      <workItem from="1753811245099" duration="39000" />
+      <workItem from="1753896601926" duration="995000" />
+      <workItem from="1753897613379" duration="6241000" />
+      <workItem from="1753906226931" duration="1409000" />
+      <workItem from="1753956970899" duration="9593000" />
     </task>
     <task id="LOCAL-00001" summary="Began project and defined the Book class.">
       <option name="closed" value="true" />
@@ -159,7 +173,103 @@
       <option name="project" value="LOCAL" />
       <updated>1753538909671</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Created the analytics folder.">
+      <option name="closed" value="true" />
+      <created>1753539301457</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1753539301457</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Imported ML model">
+      <option name="closed" value="true" />
+      <created>1753796061901</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1753796061901</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Cleaned up files">
+      <option name="closed" value="true" />
+      <created>1753803318804</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1753803318804</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Exported metadata to the database.">
+      <option name="closed" value="true" />
+      <created>1753805274856</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1753805274857</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Minor Fixes">
+      <option name="closed" value="true" />
+      <created>1753808288133</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1753808288133</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Implemented the recommendation functionality.">
+      <option name="closed" value="true" />
+      <created>1753903152555</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1753903152555</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Implemented the recommendation functionality.">
+      <option name="closed" value="true" />
+      <created>1753903192624</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1753903192624</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Uploading ML Model">
+      <option name="closed" value="true" />
+      <created>1753903221773</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1753903221773</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added serializer for ratings data.">
+      <option name="closed" value="true" />
+      <created>1753957218203</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1753957218203</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Created all API views.">
+      <option name="closed" value="true" />
+      <created>1753963490184</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1753963490184</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Created all API views.">
+      <option name="closed" value="true" />
+      <created>1753963629221</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1753963629221</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Wired API views.">
+      <option name="closed" value="true" />
+      <created>1753965554745</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1753965554745</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -186,7 +296,17 @@
     <MESSAGE value="Built the book api." />
     <MESSAGE value="Loaded the React libraries." />
     <MESSAGE value="Made a React template." />
-    <option name="LAST_COMMIT_MESSAGE" value="Made a React template." />
+    <MESSAGE value="Created the analytics folder." />
+    <MESSAGE value="Imported ML model" />
+    <MESSAGE value="Cleaned up files" />
+    <MESSAGE value="Exported metadata to the database." />
+    <MESSAGE value="Minor Fixes" />
+    <MESSAGE value="Implemented the recommendation functionality." />
+    <MESSAGE value="Uploading ML Model" />
+    <MESSAGE value="Added serializer for ratings data." />
+    <MESSAGE value="Created all API views." />
+    <MESSAGE value="Wired API views." />
+    <option name="LAST_COMMIT_MESSAGE" value="Wired API views." />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/BookRec$main.coverage" NAME="main Coverage Results" MODIFIED="1753120107209" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
