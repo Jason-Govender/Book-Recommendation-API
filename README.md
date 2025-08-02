@@ -5,6 +5,10 @@ A Django REST API for managing a personal book library and getting machine‑lea
 Users can add books, rate them, search, and get tailored recommendations powered by a KMeans clustering model trained on 5,000 users.
 The repository for the Machine-Learning Model can be found here: https://github.com/Jason-Govender/ML-Book-Recommender
 
+
+[![DEMO](https://img.youtube.com/vi/NfJkErB0KYU/maxresdefault.jpg)](https://youtu.be/NfJkErB0KYU)
+
+
 ---
 
 ## 2. Features
