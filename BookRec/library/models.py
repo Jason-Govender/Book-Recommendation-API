@@ -10,9 +10,8 @@ with open(os.path.join(MODEL_DIR, "books.json")) as f:
 
 class Book(models.Model):
     book_id = models.IntegerField()
-    title = models.CharField(max_length=200)
-    author = models.CharField(max_length=200)
-    read = models.BooleanField(default=False)
+    is_read = models.BooleanField(default=False)
+
 
 class Book_Meta(models.Model):
     book_id = models.IntegerField()
