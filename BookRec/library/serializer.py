@@ -2,6 +2,8 @@ from rest_framework import serializers
 from .models import Book
 from .models import Book_Meta
 from .models import Rating_Data
+
+#Base serializer for easy conversion to JSON
 class BookSerializer(serializers.ModelSerializer):
     class Meta:
         model = Book

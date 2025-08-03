@@ -3,6 +3,9 @@ from django.core.validators import MinValueValidator, MaxValueValidator
 from django.conf import settings
 import json
 import os
+#Generates model fields for 3 database classes.
+
+#Loads the Book metadata from the export.
 BASE_DIR = settings.BASE_DIR
 MODEL_DIR = os.path.join(BASE_DIR, "jupyter_export")
 with open(os.path.join(MODEL_DIR, "books.json")) as f:

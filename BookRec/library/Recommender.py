@@ -7,8 +7,10 @@ from sklearn.preprocessing import StandardScaler
 from .serializer import BookMetaSerializer
 from .models import Rating_Data, Book_Meta
 from rest_framework.response import Response
-
 from django.conf import settings
+#The internal logic for the Recommendation function
+
+#Loaded the external model, scaler, best books in a cluster and column structure.
 BASE_DIR = settings.BASE_DIR
 MODEL_DIR = os.path.join(BASE_DIR, "jupyter_export")
 model = joblib.load(os.path.join(MODEL_DIR, "kmeans_model.pkl"))
@@ -17,6 +19,7 @@ book_columns = joblib.load(os.path.join(MODEL_DIR, "book_columns.pkl"))
 with open(os.path.join(MODEL_DIR, "cluster_book_map.json")) as f:
     top_books = json.load(f)
 
+#Normalizes the users rating database and sends the matrix to the model.
 def find_cluster():
     ratings = Rating_Data.objects.all()
     ratings_df = pd.DataFrame(list(ratings.values()))
@@ -26,6 +29,8 @@ def find_cluster():
     cluster = model.predict(scaled_ratings)[0]
     return cluster
 
+#Gets the user's cluster and return a randomly selected list from the best books
+#In that cluster
 def recommend():
     cluster = str(find_cluster())
     books_in_cluster = top_books.get(cluster, [])

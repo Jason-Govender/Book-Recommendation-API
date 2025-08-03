@@ -4,6 +4,8 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 from rest_framework import permissions
 from django.shortcuts import redirect
+
+#Sets up the API user interface for demo purposes
 schema_view = get_schema_view(
     openapi.Info(
         title="Book API",
@@ -16,8 +18,7 @@ schema_view = get_schema_view(
 urlpatterns = [
     path('', lambda request: redirect('schema-swagger-ui', permanent=False)),
     path('admin/', admin.site.urls),
-    path('api/', include('library.urls')),  # all your API endpoints
-# Swagger UI
+    path('api/', include('library.urls')),
     # Swagger UI
     re_path(r'^docs/$', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
 

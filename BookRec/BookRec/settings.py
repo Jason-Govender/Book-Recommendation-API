@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'library',
-    'drf_yasg',
+    'drf_yasg',#Generates the demo user interface.
 ]
 
 

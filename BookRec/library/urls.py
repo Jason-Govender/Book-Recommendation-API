@@ -1,6 +1,7 @@
 from django.urls import path
 from .views import BookList, RatingList, RecommendView, MetaList
 
+
 urlpatterns = [
     path(
         'books/',
